@@ -1,4 +1,4 @@
-# STUDY
+# STUDY :pencil2:
 ### 1. Baekjoon
 ### 2. Algorithm
 ### 3. Operating System
