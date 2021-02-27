@@ -1,14 +1,12 @@
 # :pencil2: STUDY :pencil2:
 
 ### 1. Baekjoon :fire:
----
-일주일에 한 문제씩, 이주에 알고리즘 한개
+###### 일주일에 한 문제씩, 이주에 알고리즘 한개
 <br>
-
+---
 
 ### 2. Algorithm :speech_balloon:
----
-알고리즘 공부내용
+###### 알고리즘 공부내용
 <br>
 
 
