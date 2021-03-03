@@ -2,9 +2,9 @@
 
 ### 1. Baekjoon :fire:
 ###### 일주일에 한 문제씩, 이주에 알고리즘 한개
-|주차|기간|문제1|문제2|
+|분류|기간|문제1|문제2|
 |:------:|:---:|:---:|:---:|
-|1주차|21.03.03~21.03.07|[꼬인 전깃줄](https://www.acmicpc.net/problem/1365)|[휴게소 세우기](https://www.acmicpc.net/problem/1477)|
+|이분탐색|21.03.03~21.03.07|[꼬인 전깃줄](https://www.acmicpc.net/problem/1365)|[휴게소 세우기](https://www.acmicpc.net/problem/1477)|
 <br>
 
 ### 2. Algorithm :speech_balloon:
