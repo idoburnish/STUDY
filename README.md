@@ -3,6 +3,9 @@
 ### 1. Baekjoon :fire:
 ###### 일주일에 한 문제씩, 이주에 알고리즘 한개
 <br>
+|제목|내용|설명|
+|------|---|---|
+|1주차|21.03.03~21.03.07|[꼬인 전깃줄](https://www.acmicpc.net/problem/1365)|
 
 
 ### 2. Algorithm :speech_balloon:
