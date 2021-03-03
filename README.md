@@ -10,7 +10,7 @@
 <br>
 ||1|2|3|
 |:---:|:---:|:---:|:---:|
-|```1주차```<br>(21.03.03~21.03.07||[꼬인 전깃줄](https://www.acmicpc.net/problem/1365)|[휴게소 세우기](https://www.acmicpc.net/problem/1477)|
+|```1주차```<br>(21.03.03~21.03.07||[꼬인 전깃줄](https://www.acmicpc.net/problem/1365)|[휴게소 세우기](https://www.acmicpc.net/problem/1477)||
 
 ### 3. Operating System :file_folder:
 ###### 운영체제 공부내용
