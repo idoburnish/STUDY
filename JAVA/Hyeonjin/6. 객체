@@ -10,9 +10,141 @@
     -> 모바일 : 안드로이드
 
 [[ 클래스와 객체 ]]
+
   클래스 : 객체를 정의해 놓은 것, 객체를 생성하는데 사용
            ex) TV 설계도, 붕어빵 기계
-  객체 : 실제로 존재하는 것. 사물 또는 개념, 객체가 가지고 있는 기능과 속성에따라 용도 다름
+  객체 : 실제로 존재하는 것. 사물 또는 개념, 객체가 가지고 있는 기능과 속성에 따라 용도 다름
            ex) TV, 붕어빵
-  객체 = 속성(변수) + 기능(메서드)
+       객체 = 속성(변수) + 기능(메서드)
+              속성 : 크기, 길이, 높이, 색상, 볼륨, 채널
+              기능 : 켜기, 끄기, 볼륨 높이기, 볼륨 낮추기, 채녈 변경하기 등
+              
+              Class Tv{
+                 /*변수(속성)*/
+                 String color; // 색깔
+                 boolean power; // 전원상태
+                 int channel; // 채널
+                 
+                 /*매서드(기능)*/
+                 void power()          { power = !power; }
+                 void channelUp()      { channel++; }
+                 void channelDown()    { channel--; }
+               
+               }
+               
+[[ 객체와 인스턴스 (객체==인스턴스) ]]
+
+  객체 : 모든 인스턴스를 대표하는 일반적 용어
+  인스턴스 : 특정 클래스로부터 생성된 객체 (예: Tv인스턴스)
+ 
+  
+[[ 클래스와 객체 ]]
+  
+  클래스가 왜 필요? --> 객체를 생성하기 위해
+  객체가 왜 필요? --> 객체를 사용하기 위해 (Tv를 사용하기 위해)
+  객체를 사용한다는 거? --> 객체가 가진 속성과 기능을 사용하려고(Tv의 속성과 기능을 사용)
+  
+  
+[[ 클래스 작성 방법 ]]
+   일반적 : 하나의 소스파일에 여러 클래스 작성
+   <Hello2.java>
+   public class Hello2{}
+          class Hello3{}  // public class가 있는 경우, 소스 파일의 이름은 반드시 public class의 이름과 일치
+   
+   <Hello2.java>
+   class Hello2 {}
+   class Hello3 {}        // public class가 하나도 없는경우, 소스 파일의 이름은 Hello2.java, Hello3.java 둘다 가능
+
+   -하나의 소스 파일에는 하나의 public class
+   -public class 이름과 소스파일 이름 일치
+   -자바는 대/소문자 구분함
+   -하나의 소스파일에는 하나의 클래스만 작성하는 것이 바람직하나 여러 개 작성해도 상관은 없음
+
+[[ 객체의 생성과 사용 ]]
+  
+  1. 객체의 생성
+     클래스명 변수명;         // 클래스의 객체를 참조하기 위한 참조변수를 선언
+     변수명 = new 클래스명(); // 클래스의 객체를 생성 후, 객체의 주소를 참조변수에 저장
+     
+     ex)  Tv t;  //Tv: 객체, t: 리모컴
+          t = new Tv();    ==>   Tv t = new Tv();
+          
+  2. 객체의 사용
+     t.channel = 7;        // Tv인스턴스 멤버변수 channel의 값을 7로
+     t.channelDown();      // Tv인스턴스 메서드 channelDown() 호출
+     
+     - 반드시 t(참조변수=리모컨)를 통해서 객체에 접근할 수 있음
+     - 객체는 설계도(클래스=변수+메서드)로 만들어져 있음
+     
+     ex)
+        Tv t1 = new Tv();  //t1값 : 0x100
+        Tv t2 = new Tv();  //t2값 : 0x200
+        t2 = t1; // 변수 t1에있는 값이 t2로 들어감  t1 : 0x100, t2 = 0x100 (t2객체 더이상 사용 불가, t2,t1같은 객체 가르킴)
+                     --> 주소값만 같으면 두 개의 리모컨이 하나의 객체를 가르킬 수 있음.
+        t1.channel = 7;
+    
+ ex) class Ex6_1{
+       public static void main(String args[]){
+            Tv t;
+            t = new Tv();
+            t.channel = 7;
+            t.channelDown();
+        }
+      }
+     class Tv {
+        String color;
+        boolean power;
+        int channel; //초기값 0으로 저장됨
+        
+        void power() {power = !power;}
+        void channelU() { ++channel; }
+        void channelDown() { --chnnel; }
+        
+     }
+         
+   
+[[ 객체 배열 ]]
+  
+  객체 배열 == 참조변수 배열
+   
+   ex) Tv tv1, tv2, tv3;       대신        Tv[] tvArr = new Tv[3]; // 길이가 3인 Tv타입의 참조변수 배열
+                                           tvArr        tvArr[0]  tvArr[1]  tvArr[2]
+                                           (0x100) ---> (null)    (null)    (null)
+       
+       //객체를 생성해서 배열의 각 요소에 저장
+       tvArr[0] = new Tv();
+       tvArr[1] = new Tv();   또는     Tv[] tvArr { new Tv(), new Tv(), new Tv() };
+       tvArr[2] = new Tv();
+       
+       
+  [[ 클래스의 정의 ]]
+     클래스
+      - 설계도
+      - 데이터 + 함수
+      - 사용자 정의 타입
+      
+    1. 변수 : 하나의 데이터를 저장할 수 있는 공간
+    2. 배열 : 같은 종류의 여러 데이터를 하나로 저장 할 수 있는 공간               // 같은 타입
+    3. 구조체 : 서로 관련된 여러 데이터(종류 관계X)를 하나로 저장할 수 있는 공간  // 다른 타입(데이터 변수 int, float, char 함께 사용가능)
+    4. 클래스 : 데이터와 함수의 결합(구조체+함수)                                // 다른 타입 + 함수
+      
+        
+  사용자 정의 타입 - 원하는 타입을 직접 만들 수 있다.
+ // 서로 관련있는 세개의 변수를 하나로 묶음
+ Class Time {
+         int hour;
+         int minute;
+         int second;
+      }
+//객체 지향적인 코드
+ Time t = new Time();
+ t.hour = 12;
+ t.minute = 34;
+ t.second = 56;
+                0x100
+t (0x100)  ---> | 12 | hour
+                | 34 | minute
+                | 56 | second
+   
+   
         
