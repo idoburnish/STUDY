@@ -5,6 +5,7 @@
 |분류|기간|문제1|문제2|
 |:------:|:---:|:---:|:---:|
 |이분탐색|21.03.03~21.03.07|[꼬인 전깃줄](https://www.acmicpc.net/problem/1365)|[가장 긴 증가하는 부분 수열 2](https://www.acmicpc.net/problem/12015)|
+|이분탐색|21.03.08~21.03.14|[K번째 수](https://www.acmicpc.net/problem/1300)|[전구](https://www.acmicpc.net/problem/2550)|
 <br>
 
 ### 2. Algorithm :speech_balloon:
