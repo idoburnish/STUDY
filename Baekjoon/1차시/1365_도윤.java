@@ -1,55 +1,57 @@
 package baekjoon;
 
-import java.io.*;
 import java.util.*;
+import java.io.*;
 
-public class B12015 {
+public class B1365 {
 
-	static int index = 0;
+	static int cnt = 0;
 	static int[] arr;
 	static int[] check;
 	
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int N = Integer.parseInt(br.readLine());
 		
+		//입력
+		int N = Integer.parseInt(br.readLine());
 		arr = new int[N];
-		check = new int[N];
+		check = new int [N];
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		for (int i=0; i<N; i++)
 			arr[i] = Integer.parseInt(st.nextToken());
-		
-		check[index++] = arr[0];
+
+		check[cnt++] = arr[0];
 		for (int i=1; i<N; i++) {
-			if (arr[i] > check[index - 1])
-				check[index++] = arr[i];
+			if (arr[i] > check[cnt-1]) {
+				check[cnt++] = arr[i];
+			}
 			else {
-				int num = BS(arr[i]);
-				check[num] = arr[i];
+				int index = BS(arr[i]);
+				check[index] = arr[i];
 			}
 		}
 		
-		System.out.println(index);
-
+		System.out.println(N - cnt);
+		//System.out.println(Arrays.toString(check));
 	}
 	
 	public static int BS(int x) {
-		int left = 0;
-		int right = index;
-		int ans = 0;
+		int right = cnt, left = 0;
+		int index = 0;
 		
 		while (left <= right) {
-			int mid = (left + right) / 2;
-			if (check[mid] >= x) {
-				ans = mid;
+			int mid = (right + left) / 2;
+			if (check[mid] > x) {
+				index = mid;
 				right = mid - 1;
 			}
-			else
+			else if (check[mid] < x){
 				left = mid + 1;
+			}
 		}
 		
-		return ans;
+		return index;
 	}
 
 }
