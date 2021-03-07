@@ -4,7 +4,7 @@
 ###### 일주일에 한 문제씩, 이주에 알고리즘 한개
 |분류|기간|문제1|문제2|
 |:------:|:---:|:---:|:---:|
-|이분탐색|21.03.03~21.03.07|[꼬인 전깃줄](https://www.acmicpc.net/problem/1365)|[휴게소 세우기](https://www.acmicpc.net/problem/1477)|
+|이분탐색|21.03.03~21.03.07|[꼬인 전깃줄](https://www.acmicpc.net/problem/1365)|[가장 긴 증가하는 부분 수열 2](https://www.acmicpc.net/problem/12015)|
 <br>
 
 ### 2. Algorithm :speech_balloon:
