@@ -39,3 +39,6 @@ public class B9935 {
         System.out.println(sb.length() > 0 ? sb.toString() : "FRULA");
     }
 }
+
+// stack 이용
+// 결과는 StringBuilder를 이용하여 stack을 string으로 변환
