@@ -45,3 +45,5 @@ public class B1213 {
         System.out.println(String.valueOf(chars));
     }
 }
+
+// 팰린드롬 만들기
